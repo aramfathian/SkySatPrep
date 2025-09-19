@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radprep-skysat"
+version = "0.1.0"
+description = "Radiometric prep for SkySat L1A panchromatic stereo with RPC preservation and optional RPC-quicklooks"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Aram Fathian" }, { name = "Dan Shugar" }]
+keywords = ["SkySat", "stereo", "RPC", "radiometric", "GDAL", "photogrammetry", "Metashape"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+
+dependencies = [
+  "numpy>=1.23",
+  "opencv-python>=4.8; extra == 'cv2'",
+  "GDAL>=3.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.6", "mypy>=1.10"]
+
+[project.scripts]
+radprep-skysat = "radprep_skysat.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

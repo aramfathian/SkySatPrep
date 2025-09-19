@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "SkySatPrep"
+version: "0.1.0"
+date-released: "2025-09-19"
+abstract: >
+  Radiometric preprocessing for SkySat Basic L1A panchromatic stereo imagery.
+  Performs percentile stretch (robust), optional CLAHE, and a conservative shadow/highlight
+  tone curve; preserves and embeds RPC metadata; can produce RPC-based quicklook orthos
+  via GDAL. Outputs 16-bit GeoTIFFs suitable for SfM/Metashape DSM generation.
+authors:
+  - family-names: Fathian
+    given-names: Aram
+    affiliation: Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
+  - family-names: Shugar
+    given-names: Dan
+    affiliation: Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
+license: MIT
+repository-code: "https://github.com/USERNAME/radprep-skysat"
+keywords:
+  - SkySat
+  - RPC
+  - radiometric correction
+  - photogrammetry
+  - SfM
+  - Metashape
+preferred-citation:
+  type: software
+  title: "SkySatPrep"
+  version: "0.1.0"
+  authors:
+    - family-names: Fathian
+      given-names: Aram
+    - family-names: Shugar
+      given-names: Dan
+  year: 2025
+  url: "https://github.com/USERNAME/radprep-skysat"
+  doi: "10.5281/zenodo.xxxxxxx"
