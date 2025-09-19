@@ -1,6 +1,7 @@
 # SkySatPrep
 
 **Authors:** Aram Fathian; Dan Shugar
+
 **Affiliation:** Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
 
 **License:** MIT
