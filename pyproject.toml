@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "skysatprep"
-version = "0.1.0"
+version = "0.2.0"
 description = "Radiometric prep for SkySat L1A panchromatic stereo with RPC preservation and optional RPC-quicklooks"
 readme = "README.md"
 requires-python = ">=3.9"
