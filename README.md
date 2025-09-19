@@ -77,5 +77,5 @@ MIT (see `LICENSE`).
 
 ## How to cite
 ```
-Fathian, A., Shugar, D. (2025). SkySatPrep (v0.1.0) [Software]. Zenodo. https://doi.org/xxxxxxxxx 
+Fathian, A., Shugar, D. (2025). SkySatPrep (v0.1.0) [Software]. Zenodo. https://doi.org/10.5281/ZENODO.17156601
 ```
