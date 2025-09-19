@@ -26,20 +26,50 @@ Quicklook orthos (optional) are generated using `gdalwarp -rpc` and a user‑sup
 - Optional `gdaladdo` pyramids
 - Optional `gdalwarp -rpc` quicklooks with `RPC_DEM=...`
 
-## Install
+## Installation
 
-You need GDAL (>=3.4) available to Python **and** the `gdalwarp/gdaladdo` CLI on PATH.
+### Quick install (recommended)
+
+> We recommend using a fresh Conda environment so GDAL CLI and Python bindings match.
 
 ```bash
-# create env (recommended)
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# 1) Create & activate env (Linux/macOS/WSL)
+conda create -n skysatprep -c conda-forge -y python=3.10 gdal numpy
+conda activate skysatprep
 
-# install from source
-pip install -U pip
-pip install -e .[dev]     # or: pip install -e .
+# 2) Install the package from PyPI
+pip install skysatprep
 
-# If you want CLAHE:
+# 3) (Optional) Install OpenCV if you want to use --clahe
 pip install opencv-python
+```
+
+**Verify:**
+```bash
+gdalinfo --version
+python -c "from osgeo import gdal; print('GDAL OK:', gdal.VersionInfo())"
+skysatprep --help
+```
+
+### Alternative install options
+
+**A) From GitHub (specific release):**
+```bash
+pip install "git+https://github.com/aramfathian/SkySatPrep.git@v0.2.0"
+```
+
+**B) From source (editable dev install):**
+```bash
+# inside the repo folder
+pip install -e .[dev]
+```
+
+### Notes on dependencies
+
+- **GDAL**: installed via conda-forge in the steps above (best for Linux/WSL/macOS).  
+  If you prefer system packages on Ubuntu: `sudo apt-get install gdal-bin python3-gdal` (then still `pip install skysatprep` inside a venv).
+- **OpenCV**: optional; required only if you use `--clahe`. If not needed, skip it.
+- Python ≥ **3.9**.
 ```
 
 ## Usage
