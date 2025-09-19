@@ -1,5 +1,5 @@
 import numpy as np
-from radprep_skysat.core import robust_percentiles, apply_shadow_highlight_tone
+from skysatprep.core import robust_percentiles, apply_shadow_highlight_tone
 
 def test_percentiles_basic():
     arr = np.array([[0, 10, 100, 65535]], dtype=np.uint16)

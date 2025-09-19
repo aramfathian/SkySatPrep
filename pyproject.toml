@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "radprep-skysat"
+name = "skysatprep"
 version = "0.1.0"
 description = "Radiometric prep for SkySat L1A panchromatic stereo with RPC preservation and optional RPC-quicklooks"
 readme = "README.md"
@@ -27,7 +27,8 @@ dependencies = [
 dev = ["pytest>=7.4", "ruff>=0.6", "mypy>=1.10"]
 
 [project.scripts]
-radprep-skysat = "radprep_skysat.cli:main"
+skysatprep = "skysatprep.cli:main"
+
 
 [tool.setuptools.packages.find]
 where = ["src"]

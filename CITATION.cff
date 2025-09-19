@@ -16,7 +16,7 @@ authors:
     given-names: Dan
     affiliation: Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
 license: MIT
-repository-code: "https://github.com/USERNAME/radprep-skysat"
+repository-code: "https://github.com/aramfathian/SkySatPrep"
 keywords:
   - SkySat
   - RPC
@@ -34,5 +34,5 @@ preferred-citation:
     - family-names: Shugar
       given-names: Dan
   year: 2025
-  url: "https://github.com/USERNAME/radprep-skysat"
+  url: "https://github.com/aramfathian/SkySatPrep"
   doi: "10.5281/zenodo.xxxxxxx"

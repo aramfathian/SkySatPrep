@@ -1,13 +1,15 @@
-# radprep-skysat
-**Author:** Aram Fathian
-**Affiliation:** Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
-**License:** MIT
+# SkySatPrep
 
+**Authors:** Aram Fathian; Dan Shugar
+**Affiliation:** Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
+
+**License:** MIT
 
 
 Radiometric preprocessing for **SkySat Basic L1A panchromatic stereo imagery**. The tool performs robust
 **radiometric correction** (percentile stretch + optional CLAHE + conservative shadow/highlight tone curve),
 **preserves and embeds RPC metadata**, and can generate **RPC‑based quicklook orthos** (via GDAL) to aid QA.
+
 
 **Input data**: single‑band 16‑bit GeoTIFF frames matching the SkySat L1A PAN naming convention
 (`*_basic_l1a_panchromatic_dn.tif`) with sidecar metadata (e.g., `.RPB`, `_RPC.TXT`, `.json`, `.imd`, `.xml`).
@@ -42,7 +44,7 @@ pip install opencv-python
 ## Usage
 
 ```bash
-radprep-skysat   --pair1_src /path/to/Pair1/SkySatScene   --pair2_src /path/to/Pair2/SkySatScene   --pair1_out /path/to/Pair1/radprep   --pair2_out /path/to/Pair2/radprep   --pmin 1 --pmax 99   --clahe 3.0 --tiles 8   --shadow_boost 0.20 --highlight_comp 0.10   --pyramids   --quicklook --rm_quicklook   --dem /path/to/ellipsoidal_dem.tif   --t_srs EPSG:32608 --ql_res 1.5
+skysatprep   --pair1_src /path/to/Pair1/SkySatScene   --pair2_src /path/to/Pair2/SkySatScene   --pair1_out /path/to/Pair1/radprep   --pair2_out /path/to/Pair2/radprep   --pmin 1 --pmax 99   --clahe 3.0 --tiles 8   --shadow_boost 0.20 --highlight_comp 0.10   --pyramids   --quicklook --rm_quicklook   --dem /path/to/ellipsoidal_dem.tif   --t_srs EPSG:32608 --ql_res 1.5
 ```
 
 **Notes**
