@@ -20,7 +20,6 @@ classifiers = [
 dependencies = [
   "numpy>=1.23",
   "opencv-python>=4.8; extra == 'cv2'",
-  "GDAL>=3.4",
 ]
 
 [project.optional-dependencies]
