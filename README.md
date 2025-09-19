@@ -34,20 +34,16 @@ Quicklook orthos (optional) are generated using `gdalwarp -rpc` and a user‑sup
 
 ```bash
 # 1) Create & activate env (Linux/macOS/WSL)
-conda create -n skysatprep -c conda-forge -y python=3.10 gdal numpy
+conda create -n skysatprep -c conda-forge -y python=3.10 gdal numpy opencv
 conda activate skysatprep
 
-# 2) Install the package from PyPI
+# 2) Install the package
 pip install skysatprep
 
-# 3) (Optional) Install OpenCV if you want to use --clahe
-pip install opencv-python
 ```
 
 **Verify:**
 ```bash
-gdalinfo --version
-python -c "from osgeo import gdal; print('GDAL OK:', gdal.VersionInfo())"
 skysatprep --help
 ```
 
